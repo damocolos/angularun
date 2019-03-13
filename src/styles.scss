@@ -1,0 +1,349 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// general margin padding
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.ml-5 {
+    margin-left: 5px;
+}
+
+// card
+
+.p-card.mat-card {
+    padding: 30px;
+}
+
+// paginator
+
+.mat-paginator-container {
+    justify-content: center !important;
+}
+
+// progress
+
+.progress-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    text-align: center;
+    background: #ffffffad;
+    mat-spinner {
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    span {
+        color: #777777;
+    }
+}
+
+// anchor
+
+a, a:visited, a:hover, a:active {
+    color: initial;
+    text-decoration: none;
+}
+
+* {
+    &:active,
+    :focus {
+        outline: none !important;
+    }
+}
+
+label {
+    margin-bottom: 0;
+}
+
+code {
+    white-space: nowrap;
+    border-radius: 10px;
+    padding: 0 8px 1px 8px;
+}
+
+.mat-menu-content {
+    fa-icon {
+        position: relative;
+        top: 2px;
+        left: 4px;
+    }
+}
+
+// container top margin
+.container-main {
+    margin: 20px;
+}
+
+mat-dialog-container {
+    max-height: 600px;
+}
+
+.page-title {
+    display: inline-block;
+}
+
+.options-table {
+    padding-top: 10px;
+    button {
+        margin-left: 10px;
+    }
+}
+
+.options-table-without-search {
+    // padding-top: 10px;
+    button {
+        margin-left: 10px;
+    }
+}
+
+.action-bottom-button {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.no-data {
+    padding: 10px 15px;
+    font-weight: bold;
+    color: white;
+    border-radius: 20px;
+}
+
+// table
+.table-container {
+    position: relative;
+    // max-height: 400px;
+    // overflow: auto;
+}
+
+table {
+    width: 100%;
+}
+
+// table search
+.search-table {
+    width: 190px;
+    display: inline-block;
+    padding: 5px 12px;
+    /* float: left; */
+    background: white;
+    border-radius: 5px;
+    line-height: 24px;
+    input {
+        float: left;
+        width: 139px;
+        margin-right: 5px;
+    }
+    fa-icon {
+        font-size: 1.2em;
+    }
+}
+
+.container-dialog {
+    .search-table{
+        width: 130px;
+        position: relative;
+        input {
+            width: 100%;
+        }
+    }
+}
+
+// INPUT
+.input-shared {
+    background-color: #fff;
+    padding: 10px 0px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    p {
+        margin: 0;
+    }
+    .input-label {
+        font-size: .8em;
+    }
+    .input-content {
+        line-height: 36px;
+    }
+    .input-content-amount {
+        padding: 0px 15px;
+        border-radius: 15px;
+    }
+}
+
+mat-checkbox {
+    display: block;
+    margin-bottom: 10px;
+}
+
+tr.select-row:hover, tr.selected {
+    background: #e9e9e9 !important;
+}
+
+td.mat-column-action {
+    text-align: center;
+}
+
+.loading-shade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    // bottom: 56px;
+    bottom: 0px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 101;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.example-rate-limit-reached {
+    color: #980000;
+    max-width: 360px;
+    text-align: center;
+}
+
+/* Column Widths */
+.mat-column-number,
+.mat-column-state {
+    max-width: 64px;
+}
+
+.mat-column-created {
+    max-width: 124px;
+}
+
+// form
+mat-form-field {
+    &.full-width {
+        width: 100%;
+    }
+}
+
+// card
+.header-side-form {
+    h3 {
+        line-height: 50px;
+        display: inline-block;
+    }
+    button {
+        float: right;
+    }
+}
+
+mat-card
+{
+    &.with-options {
+        margin-top: 10px;
+    }
+    &.with-code {
+        background: rgb(200, 200, 200);
+        pre {
+            font-size: .6em;
+        }
+    }
+}
+
+// position
+.pull-right {
+    float: right;
+}
+
+// animation
+.spinner {
+    // margin: 100px auto 0;
+    // width: 35px;
+    // text-align: center;
+}
+
+.spinner > div {
+    width: 10px;
+    height: 10px;
+    
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+    0%, 80%, 100% { -webkit-transform: scale(0) }
+    40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+    0%, 80%, 100% { 
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    } 40% { 
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+    }
+}
+
+// divider
+.divider {
+    height: 10px;
+    display: block;
+    &.card {
+        height: 10px;
+    }
+}
+
+img.icon-thumbnail {
+    width: 35px;
+}
+
+.mobile-icon {
+    font-size: 2em;
+}
+
+mat-card.no-selected {
+    text-align: center;
+    img {
+        width: 100px;
+    }
+}
+
+mat-card.ingredient-card {
+    margin-bottom: 5px;
+    &:last-child {
+        margin-bottom: 0px;
+    }
+    .action {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        button {
+            margin: 0px 2px;
+        }
+    }
+}
+
+.mat-mini-fab .mat-button-wrapper {
+    display: block;
+}

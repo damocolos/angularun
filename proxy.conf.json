@@ -1,0 +1,8 @@
+{
+    "/api/*": {
+        "target": "http://pretest-qa.privydev.id",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true
+    }
+}

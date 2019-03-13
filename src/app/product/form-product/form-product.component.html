@@ -1,0 +1,62 @@
+<h1 mat-dialog-title>
+    <span *ngIf="!form.get('id').value">Add Product</span>
+    <span *ngIf="form.get('id').value">Edit Product</span>
+</h1>
+<div mat-dialog-content>
+    <form [formGroup]="form">
+
+        <!-- // id: number;
+        // name: string;
+        // enable: boolean;
+        // description: string;
+        // ingredient: string;
+        // measurement: string;
+        // product_category_id: number;
+        // size: string;
+        // size_value: number; -->
+
+        <mat-form-field class="full-width">
+            <input matInput placeholder="Name" formControlName="name">
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+            <select matNativeControl placeholder="Category" formControlName="product_category_id">
+                <option *ngFor="let category of categories" [value]="category.id" [selected]="category.id == form.get('product_category_id').value">
+                    {{ category.name }}
+                </option>
+            </select>
+        </mat-form-field>
+        
+        <mat-form-field class="full-width">
+            <textarea matInput placeholder="Description" formControlName="description"></textarea>
+        </mat-form-field>
+        
+        <mat-form-field class="full-width">
+            <input matInput placeholder="Ingredient" formControlName="ingredient">
+        </mat-form-field>
+        
+        <mat-form-field class="full-width">
+            <input matInput placeholder="Measurement" formControlName="measurement">
+        </mat-form-field>
+
+        <div class="row">
+            <div class="col-6">
+                <mat-form-field class="full-width">
+                    <input type="number" matInput placeholder="Size Value" formControlName="size_value">
+                </mat-form-field>
+            </div>
+            <div class="col-6">
+                <mat-form-field class="full-width">
+                    <input matInput placeholder="Size" formControlName="size">
+                </mat-form-field>
+            </div>
+        </div>
+
+        <mat-checkbox formControlName="enable">Enable</mat-checkbox>
+        
+    </form>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="onSave()">Save</button>
+    <!-- <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button> -->
+</div>
